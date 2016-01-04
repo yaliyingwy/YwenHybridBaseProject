@@ -1,0 +1,136 @@
+@import 'mixin';
+@import 'normalize';
+
+.hello {
+	background-color: white;
+	.title {
+		background-color: red;
+		height: 50/$ppr;
+		line-height: 50/$ppr;
+		margin-bottom: 10/$ppr;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+	}
+	.menu {
+		background-color: yellow;
+		display: table;
+		width: 100%;
+		li {
+			display: table-cell;
+			text-align: center;
+			
+			line-height: 80/$ppr;
+			font-size: 30/$ppr;
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				@include box-sizing(border-box);
+				&:active {
+					color: blue;
+					border-bottom: 2px solid blue;
+					background-color: white;
+				}
+				&:hover {
+					color: blue;
+				}
+			}
+		}
+	}
+
+}
+
+.login {
+	input {
+		margin: 10/$ppr 0;
+		height: 60/$ppr;
+		width: 80%;
+		position: relative;
+		left: 10%;
+		border: 1px solid gray;
+		line-height: 60/$ppr;
+		font-size: 30/$ppr;
+		@include box-sizing(border-box);
+	}
+}
+
+.btn-pri {
+	width: 80%;
+	display: block;
+	left: 10%;
+	position: relative;
+	margin: 20/$ppr 0;
+	height: 60/$ppr;
+	line-height: 60/$ppr;
+	color: white;
+	background-color: blue;
+	font-size: 40/$ppr;
+	text-align: center;
+	&:hover {
+		background-color: yellow;
+		color: red;
+	}
+}
+
+.input-weak {
+	width: 100%;
+	display: block;
+	@include flex(1);
+}
+
+.demo {
+	background-color: white;
+	text-align: center;
+	h1 {
+		margin: 30/$ppr 0;
+	}
+	a {
+		display: block;
+		padding: 20/$ppr 0;
+		&:hover {
+			background-color: blue;
+			color: white;
+		}
+	}
+}
+
+.item-list {
+	display: block;
+	height: 100%;
+	h1 {
+		margin: 30/$ppr 0;
+		text-align: center;
+	}
+
+	.list {
+		position: absolute;
+		top: 300/$ppr;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+	}
+
+	ul {
+		 height: 100%;
+		 overflow-y: scroll;
+		 -webkit-overflow-scrolling: touch;
+	}
+
+	li {
+		height: 60/$ppr;
+		line-height: 60/$ppr;
+		display: block;
+		font-size: 30/$ppr;
+		padding-left: 50/$ppr;
+		&:hover {
+			background-color: blue;
+			color: white;
+		}
+		border-bottom: 1px solid #ccc;
+		&:first-child {
+			border-top: 1px solid #ccc;
+		}
+	}
+}
