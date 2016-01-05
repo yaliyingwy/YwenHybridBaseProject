@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
     defaultConfig {
         applicationId "ywen.com.hybridandroid"
-        minSdkVersion 11
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -24,6 +24,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //    compile(group: 'ywen.com.hybrid', name: 'hybrid', version: '0.2', ext: 'xml')
     compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'ywen.com.hybrid:hybrid:0.4'
+    compile 'ywen.com.hybrid:hybrid:0.7'
     compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.android.support:design:22.2.1'
 }

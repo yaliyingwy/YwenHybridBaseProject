@@ -18,6 +18,7 @@
 {
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:NSStringFromClass([self class])];
+    [self callJS:@{@"msg": @"VIEW_APPEAR"}];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {

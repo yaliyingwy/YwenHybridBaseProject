@@ -32,6 +32,23 @@ public class HybridFragment extends Fragment implements HybridCore{
     private String htmlPage = null;
 
     private HybridUI hybridUI = new HybridUIImpl();
+
+    public HybridNav getHybridNav() {
+        return hybridNav;
+    }
+
+    public void setHybridNav(HybridNav hybridNav) {
+        this.hybridNav = hybridNav;
+    }
+
+    public HybridUI getHybridUI() {
+        return hybridUI;
+    }
+
+    public void setHybridUI(HybridUI hybridUI) {
+        this.hybridUI = hybridUI;
+    }
+
     private HybridNav hybridNav = null;
 
     public HybridWebView getWebView() {
@@ -75,6 +92,7 @@ public class HybridFragment extends Fragment implements HybridCore{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 WebView.setWebContentsDebuggingEnabled(true);
             }
+            // FIXME: 16/1/5 替换成真的数据
             ((WebView)webView).loadUrl("javascript:(function(){window.uuid=1;window.client_type='1';window.version='1'})()");
         }
     }
@@ -104,6 +122,14 @@ public class HybridFragment extends Fragment implements HybridCore{
             paramMap.put("msg", "例子里面还没实现呢！");
             webView.callJs(paramMap);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("msg", "VIEW_APPEAR");
+        webView.callJs(paramMap);
     }
 
     @Override

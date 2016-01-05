@@ -6,7 +6,7 @@ DB = require 'utils/storage'
 CommonAction = require 'actions/common/common'
 CommonStore = require 'stores/common/common'
 
-document.addEventListener 'deviceready', ->
+document.addEventListener 'DOMContentLoaded', ->
 	FastClick.attach document.body
 	Hybrid.hybrid.registerHandler (data)->
 		CommonAction.callFromNative data

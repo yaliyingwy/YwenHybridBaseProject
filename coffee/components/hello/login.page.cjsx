@@ -25,7 +25,7 @@ Login = React.createClass {
 	_change: (event)->
 		switch event.msg
 			when 'PAGE_HELLO_LOGIN_APPEAR'
-				alert 'login page appear!'
+				console.log  'login page appear!'
 
 	getInitialState: ->
 		{

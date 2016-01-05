@@ -51,6 +51,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0",
-    "ywen-hybrid-js": "0.1.2"
+    "ywen-hybrid-js": "0.1.3"
   }
 }

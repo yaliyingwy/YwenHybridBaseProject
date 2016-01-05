@@ -1,0 +1,19 @@
+### 注意事项
+* 常量统一大写，用_连接
+* require进来的首字母大写，驼峰命名
+* 配置相关的写到setting里
+* helper用来做一些输入输出的转换
+* 校验的正则统一写道validator里
+* 调试不要用alert,用plugin里面的debug代替
+* 为了一套代码同时适配三端，push的时候page参数请跟路由里面配置的path保持一致
+* gulp里的任务，build和dist的区别在于dist压缩过，去掉了log,spa:build和spa:dist是生成单页应用的任务，spa:server启动了一个供单页应用使用的服务器，里面有些假接口
+* 提交代码前请仔细检查文件的改动，不要提交无关的东西到代码库
+* webpack启动时会扫描中间有page的文件，自动生成html,js和css,没个页面的文件名里都要有page,非页面的组件不要用page
+* 原生调用js的callJs方法，实现上不再直接调用window上的方法，而是dispatch一条消息
+* 原生每个页面出现的时候发送一条{"msg": "VIEW_APPEAR"}的方法，用于处理一些刷新页面的操作
+* 所有消息统一发送对象，不要发字符串或者数组
+* 不要直接改前端给的scss，我们可以在自己的app.scss里面写我们自己的样式
+* 直接使用immutablejs里的数据接口，不要tojs！
+* action发送参数统一传递一个params对象，这样接口参数变动后改动最小
+* 更新immutablejs的数据结构的时候使用merge，不要一个一个参数的set
+* 图片我后面会写一个component,统一使用这个加载图片，里面会处理lazyloading和404等逻辑

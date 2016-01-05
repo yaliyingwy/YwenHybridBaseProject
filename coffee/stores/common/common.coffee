@@ -5,8 +5,10 @@ assign = require 'object-assign'
 Dispatcher = require 'dispatcher/dispatcher'
 ActionType = require 'constants/events'
 
+
+#TODO: 一些页面出现刷新数据的方法放到这里
 viewAppear = ->
-	paths = winow.location.pathname.split('/')
+	paths = window.location.pathname.split('/')
 	switch paths[paths.length - 1]
 		when 'hello-login.html', 'hello'
 			CommonStore.emitChange {

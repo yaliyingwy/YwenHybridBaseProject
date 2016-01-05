@@ -36,7 +36,7 @@ Items = React.createClass {
 	_change: (event)->
 		switch event.msg
 			when 'PAGE_HELLO_ITEM_LIST_APPEAR'
-				alert 'item-list page appear!'
+				console.log  'item-list page appear!'
 			when 'ITEM_LIST_CHANGE'
 				_netBusy = false
 				list = HelloStore.getItemList()
